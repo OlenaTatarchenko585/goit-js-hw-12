@@ -7,12 +7,12 @@ let query = '';
 let page = 1;
 let totalPages = 0;
 
-const form = document.querySelector('.search-form');
+const form = document.querySelector('.form');
 const loadMoreBtn = document.querySelector('.load-more');
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
-  query = event.currentTarget.elements.query.value.trim();
+  query = event.currentTarget.elements['search-text'].value.trim();
   
   if (!query) return;
 
@@ -33,10 +33,14 @@ form.addEventListener('submit', async (event) => {
     createGallery(data.hits);
     totalPages = Math.ceil(data.totalHits / 15);
 
-    if (page < totalPages) {
+    if (page >= totalPages) {
+        hideLoadMoreButton();
+        iziToast.info({ message: "We're sorry, but you've reached the end of search results." });
+    } else {
       showLoadMoreButton();
     }
-  } catch (error) {
+  }
+    catch (error) {
     hideLoader();
     iziToast.error({ message: 'Something went wrong!' });
   }
