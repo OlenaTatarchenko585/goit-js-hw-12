@@ -7,12 +7,121 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+ .search-form {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 40px;
+  gap: 8px;
+  margin: 36px auto;
+}
+
+input
+
+/*[name="search-text"]*/
+  {
+  width: 272px;
+  height: 40px;
+  border: 1px solid #808080;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+  padding-left: 16px;
+}
+
+input:hover {
+  border: 1px solid #000000;
+}
+
+input:focus {
+  border: 1px solid #4E75FF;
+  outline: none;
+}
+
+button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background-color: #4e75ff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1128px;
+}
+
+.gallery-item {
+  width: 358px;
+  height: 200px;
+  border: 1px solid #8b8b8b;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 152px;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4px 0;
+  background-color: #fff;
+  width: 100%;
+  height: 48px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #2E2F42;
+}
+
+.info-item b {
+  font-weight: 600;
+  color: #2E2F42;
+}
+.is-hidden  {
+  display: none !important;
+}
+
+.loader {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.load-more {
+  display: block;
+  margin: 20px auto;
+ 
+}
